@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mood Checker</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>Mood Checker</h1>
+    <p class="sub">Type a sentence. An AI model running in a Docker container on Runpod tells you if it sounds positive or negative.</p>
+  </header>
+
+  <form id="form" class="card">
+    <label for="text">Your text</label>
+    <textarea id="text" maxlength="1000" required>I'm excited to launch my first website!</textarea>
+    <div class="row">
+      <span id="count" class="muted">0 / 1000</span>
+      <button id="go" type="submit">Check mood</button>
+    </div>
+    <div id="out" hidden></div>
+  </form>
+
+  <footer class="muted">Python · FastAPI · Docker · Runpod</footer>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>
